@@ -50,5 +50,39 @@ public class Osoba
         return (Nazwa: "Jablka", Liczba: 5);
     }
 
-    //de
+    //dekonstrukotry
+    public void Deconstruct(out string? nazwisko, out DateTime dataUrodzenia)
+    {
+        nazwisko = Nazwisko;
+        dataUrodzenia = DataUrodzenia;
+    }
+
+    public void Deconstruct(out string? nazwisko, out DateTime dataUrodzenia, out AntyczneCudaSwiata ulubiony)
+    {
+        nazwisko = Nazwisko;
+        dataUrodzenia = DataUrodzenia;
+        ulubiony = UlubionyAntycznyCud;
+    }
+    //Metody przeciazone
+    public string PowiedzCzesc()
+    {
+        return $"{Nazwisko} mowi 'Czesc!'";
+    }
+
+    public string PowiedzCzesc(string imie)
+    {
+        return $"{Nazwisko} mowi 'Czesc, {imie}!'";
+    }
+    //Metoda z parametrami opcjonalnymi
+    public string ParametryOpcjonalne(
+        string polecenie = "Biegnij!",
+        double liczba = 0.0,
+        bool aktywne = true)
+    {
+        return string.Format(
+            format: "polecenie to {0}, liczba to {1}, aktywne to {2}",
+            arg0: polecenie,
+            arg1: liczba,
+            arg2: aktywne);
+    }
 }
