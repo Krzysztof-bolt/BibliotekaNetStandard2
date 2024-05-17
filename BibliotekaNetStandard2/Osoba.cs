@@ -85,4 +85,13 @@ public class Osoba
             arg1: liczba,
             arg2: aktywne);
     }
+
+    public void PrzekazywanieParametrow(int x, ref int y, out int z)
+    {
+        z = 99;
+
+        x++ ; 
+        y++ ; 
+        z++ ;
+    }
 }
