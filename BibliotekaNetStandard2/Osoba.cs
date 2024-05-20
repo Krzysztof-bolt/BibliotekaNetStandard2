@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BibliotekaWspolna;
 
-public class Osoba
+public partial class Osoba
 {
     public string Nazwisko;
     public DateTime DataUrodzenia;
