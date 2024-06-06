@@ -138,6 +138,23 @@ public partial class Osoba
         return Osoba.Prokreacja(o1 , o2);
     }
 
+    //metoda z funkcja lolakna
 
+    public static int Silnia(int liczba)
+    {
+        if (liczba < 0) 
+        {
+            throw new ArgumentException($"{nameof(liczba)} nie moze byc mniejsza od zera.");
+
+        }
+        return lokalnaSilnia(liczba);
+    
+
+    int lokalnaSilnia(int lokalnaLiczba) //funkcja lokalna 
+    {
+        if (lokalnaLiczba == 0) return 1;
+        return lokalnaLiczba * lokalnaSilnia(lokalnaLiczba - 1);
+    }
+    }
 
 }
